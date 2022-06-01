@@ -33,7 +33,7 @@ function Footer() {
 
       <section className='mb-4'>
         <p>
-          Welcome to Our new Restaurant.. 
+          Restaurant Details.. 
         </p>
       </section>
 
@@ -72,7 +72,7 @@ function Footer() {
             <ul className='list-unstyled mb-0'>
               <li>
                 <a href='#!' className='text-white'>
-                  AL Razi Restaurant
+                  Restaurant App
                 </a>
               </li>
               <li>
@@ -100,7 +100,7 @@ function Footer() {
     <div className='text-center p-3' style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}>
       
       <a className='text-white' href='https://alrazi.com/'>
-      © Al Razi Restaurant
+      © Restaurant
       </a>
     </div>
   </MDBFooter>

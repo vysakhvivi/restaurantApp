@@ -6,11 +6,11 @@ function Header() {
   return (
     <Navbar bg="dark" variant="dark" className='navbar'>
     <Container>
-    <Navbar.Brand  class="nav-links" href="#home">Al Razi Restaurant</Navbar.Brand>
+    <Navbar.Brand  className="nav-links" href="#home">Restaurant</Navbar.Brand>
     <Nav className="mr-auto n1">
-      <Nav.Link class="nav-links" href="#home">Home</Nav.Link>
-      <Nav.Link class="nav-links" href="#features">Products</Nav.Link>
-      <Nav.Link class="nav-links" href="#pricing">Contact us</Nav.Link>
+      <Nav.Link className="nav-links" href="#home">Home</Nav.Link>
+      <Nav.Link className="nav-links" href="#features">Products</Nav.Link>
+      <Nav.Link className="nav-links" href="#pricing">Contact us</Nav.Link>
     </Nav>
     </Container>
   </Navbar>
