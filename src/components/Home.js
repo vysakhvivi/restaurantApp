@@ -2,36 +2,36 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import { Col ,Row} from 'react-bootstrap'
 import RestaurantDetails from './RestaurantDetails'
+import { useDispatch,useSelector } from 'react-redux'
+import { listRestaurants} from '../action/restaurantAction'
 
 function Home() {
 
+const dispatch=useDispatch()
+const hotels=useSelector(state=>state.restaurantList)
+const {restaurant}=hotels 
 
-  const [hotel, sethotel] = useState([])
+useEffect(() => {
 
-  useEffect(() => {
-    const fetchdata = async () => {
-      await fetch('/restaurants.json')
-        .then(res => res.json())
-        .then(data => sethotel(data.restaurants))
-    }
-    fetchdata()
-    console.log('restaurants are', hotel);
-    return () => {
+  dispatch(listRestaurants())
+}, [])
 
-    }
-  }, [])
 
 
   return (
     <Row>
-      <Col sm={12} lg={4} md={6} xl={3} >
-        {hotel.map(item => (
-          <RestaurantDetails data={item}>
+      {
+      restaurant.map(item => (
+      <Col sm={12} md={8} lg={6} xl={3}>
+        
 
-          </RestaurantDetails>
-        ))
-        }
-      </Col>
+          <RestaurantDetails data={item}/>
+
+          </Col>
+      ))
+       
+      
+      }
     </Row>
   )
 }
